@@ -1,13 +1,10 @@
-import { resolve } from 'path';
-import { realpathSync } from 'fs';
+const path = require('path');
+const fs = require('fs');
 
-const ROOT_DIR = realpathSync(process.cwd());
-const resolvePath = /**
- * @param {string} relativePath
- */
- (relativePath) => resolve(ROOT_DIR, relativePath);
+const ROOT_DIR = fs.realpathSync(process.cwd());
+const resolvePath = relativePath => path.resolve(ROOT_DIR, relativePath);
 
-export default {
-  resolvePath,
+module.exports = {
   ROOT_DIR,
+  resolvePath,
 };
