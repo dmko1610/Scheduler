@@ -8,7 +8,7 @@ const { resolvePath } = require('./utils');
 module.exports = merge(common, {
   mode: 'production',
   output: {
-    filename: 'bundle.js',
+    filename: '[name].[hash].bundle.js',
     path: resolvePath('dist'),
   },
   module: {
