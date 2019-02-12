@@ -1,17 +1,18 @@
-import CleanWebpackPlugin from 'clean-webpack-plugin'
-import HtmlWebpackPlugin from 'html-webpack-plugin'
-import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin'
-import webpack from 'webpack'
-const { resolvePath, ROOT_DIR } = require('./utils').default
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
+const webpack = require('webpack')
+const { resolvePath, ROOT_DIR } = require('./utils')
 
 const appTsConfig = resolvePath('tsconfig.json')
 
 module.exports = {
   entry: {
-    app: './src/index'
+    app: './src/index.tsx'
   },
   resolve: {
     extensions: ['.css', '.ts', '.tsx', '.js', '.json'],    
+    // @ts-ignore
     plugins: [new TsconfigPathsPlugin({ configFile: appTsConfig })],
   },
   module: {
@@ -49,7 +50,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['dist'], {
       root: ROOT_DIR,
-    }),
+    }),   
     new HtmlWebpackPlugin({
       title: 'COPT store',
       template: './src/index.html',
@@ -59,7 +60,7 @@ module.exports = {
     })
   ],
   output: {
-    filename: '[name].bundle.js',
+    filename: 'bundle.js',
     path: resolvePath('dist'),
   },
 }
