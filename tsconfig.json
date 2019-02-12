@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "outDir": "build/dist",
-    "module": "esnext",
+    "module": "es6",
     "target": "es5",
     "lib": ["es6", "dom"],
     "sourceMap": true,
@@ -17,14 +17,40 @@
     "importHelpers": true,
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true
+    "noUnusedLocals": true,
+    "paths": {
+      "@api": [
+        "app/api"
+      ],
+      "@state/*": [
+        "app/state/*"
+      ],
+      "@state": [
+        "app/state/index"
+      ],
+      "@models": [
+        "app/api/models"
+      ],
+      "@components/*": [
+        "app/components/*"
+      ],
+      "@shared/*": [
+        "app/shared/*"
+      ],
+      "@helpers": [
+        "app/api/helpers"
+      ]
+    }
   },
+  "include": [
+    "./src/**/*",
+    "./typings/**/*"
+  ],
   "exclude": [
     "node_modules",
     "build",
     "scripts",
-    "acceptance-tests",
-    "webpack",
+    "acceptance-tests",    
     "jest",
     "src/setupTests.ts"
   ]
