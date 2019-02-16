@@ -1,11 +1,11 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-import registerServiceWorker from './registerServiceWorker';
+import registerServiceWorker from './registerServiceWorker'
 import './styles/index.less'
-import MainPageHeader from './components/MainPageHeader';
+import MainPage from './components/MainPage'
 
 ReactDOM.render(
-  <MainPageHeader />,
+  <MainPage />,
   document.getElementById('root') as HTMLElement
-);
-registerServiceWorker();
+)
+registerServiceWorker()

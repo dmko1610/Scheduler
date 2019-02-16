@@ -5,8 +5,7 @@ import '../styles/MainPageHeader.less'
 
 class MainPageHeader extends React.Component {
   public render() {
-    return (
-      <div className="main-page">
+    return (      
         <header className="main-page__header">
           <img src={ logo } className="main-page__logo" alt="logo" />
           <h2 className="main-page__title">Scheduler v.0.1</h2>
@@ -14,9 +13,8 @@ class MainPageHeader extends React.Component {
           <h1>PLAN.EXECUTE.DIVIDE</h1>
           <h3>we've developed it. and have made our best. <br />
             cuz' we are professionals</h3>
-        </header>
-      </div>
-    );
+        </header>      
+    )
   }
 }
 

@@ -1,28 +1,23 @@
-.main-page {
-  text-align: center; 
-  width: 100%;  
-}
-
 .main-page__header {
-  background-color: rgb(192, 188, 188);  
+  text-align: center;
+  background-image: linear-gradient( 135deg, #97ABFF 10%, #123597 100%);
   display: grid;
-  // width: 90%;
-  padding: 15px; 
-  padding-bottom: 60px; 
+  padding: 15px;
+  padding-bottom: 60px;
   grid-template-rows: auto auto;
-  grid-template-columns: 330px auto auto;
+  grid-template-columns: 380px auto auto;
 
-  
-  .main-page__logo {    
+
+  .main-page__logo {
     height: 80px;
-    grid-column: 1; 
+    grid-column: 1;
     grid-row: 1;
     justify-self: flex-start;
-  } 
+  }
 
-  .main-page__title {    
+  .main-page__title {
     grid-row: 1;
-    grid-column: 1; 
+    grid-column: 1;
     font-size: 32px;
     margin: 0;
     justify-self: flex-end;
@@ -31,40 +26,44 @@
 
   .main-page__button {
     grid-row: 1;
-    grid-column: 3;    
-    justify-self: center;
+    grid-column: 3;
+    justify-self: flex-end;
     align-self: center;
     padding: 8px 50px;
+    font-family: CurrentRegular, sans-serif;
+    margin-right: 20px;
     font-size: 16px;
-    font-weight: bold; 
+    font-weight: bold;
     border: 1px solid black;
     border-radius: 5px;
-    background-color: #fff;
+    background-color: rgb(160, 183, 241);
   }
 
-  .main-page__button:hover {    
-    background-color: rgb(165, 160, 160);
+  .main-page__button:hover {
+    background-color: rgb(68, 80, 185);
     color: white;
   }
 
-  .main-page__button:active {    
-    background-color: rgb(141, 137, 137);
+  .main-page__button:active {
+    background-color: rgb(37, 42, 121);
   }
 
 
   h1 {
-    grid-column: 2;
+    grid-column-start: 1;
+    grid-column-end: 4;    
     grid-row: 2;
     align-self: flex-start;
     margin-bottom: 50px;
     padding-bottom: 20px;
-    font-size: 60px;
+    font-size: 60px;    
   }
 
   h3 {
-    grid-column: 2;
+    grid-column-start: 1;
+    grid-column-end: 4;
     grid-row: 2;
     align-self: flex-end;
   }
-  
+
 }
