@@ -1,10 +1,10 @@
 import * as React from 'react'
-import MainPageHeader from './MainPageHeader'
-import MainPageFooter from './MainPageFooter'
 import MainPageBody from './MainPageBody'
+import MainPageFooter from './MainPageFooter'
+import MainPageHeader from './MainPageHeader'
 
 class MainPage extends React.Component {
-  render() {
+  public render() {
     return (
       <div className="container">
         <MainPageHeader />
