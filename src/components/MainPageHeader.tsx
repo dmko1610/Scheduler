@@ -2,7 +2,6 @@ import * as React from 'react'
 import logo from '../images/organize.svg'
 import '../styles/MainPageHeader.less'
 
-
 class MainPageHeader extends React.Component {
   public render() {
     return (      
@@ -18,4 +17,4 @@ class MainPageHeader extends React.Component {
   }
 }
 
-export default MainPageHeader;
+export default MainPageHeader
