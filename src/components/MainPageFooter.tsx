@@ -9,7 +9,6 @@ class MainPageFooter extends React.Component {
                 <h1>Interested?</h1>
                 <button className="main-page__button" value="JOIN US" onClick={() => window.scrollTo(0, 0)}>JOIN US</button>
             </footer>
-
         )
     }
 }
