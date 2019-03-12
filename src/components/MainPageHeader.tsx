@@ -17,6 +17,8 @@ class MainPageHeader extends React.Component<IProps, IState> {
     this.state = {
       showForm: false
     }
+
+    this.toggleForm = this.toggleForm.bind(this)
   }
 
   public toggleForm() {
@@ -30,7 +32,7 @@ class MainPageHeader extends React.Component<IProps, IState> {
       <header className="main-page__header">
         <img src={ logo } className="main-page__logo" alt="logo" />
         <h2 className="main-page__title">Scheduler v.0.1</h2>
-        <button className="main-page__button" onClick={ this.toggleForm.bind(this) }>JOIN</button>
+        <button className="main-page__button" onClick={ this.toggleForm }>JOIN</button>
         <h1>PLAN.EXECUTE.DIVIDE</h1>
         <h3>we've developed it. and have made our best. <br />
           cuz' we are professionals</h3>
