@@ -1,7 +1,7 @@
 import * as React from 'react';
-import logo from '../../assets/images/organize.svg';
-import JoinForm from './routes/JoinForm';
-import '../../assets/styles/MainPageHeader.less';
+import logo from '../../../assets/images/organize.svg';
+import JoinForm from '../auth/JoinForm';
+import '../../../assets/styles/MainPageHeader.less';
 
 interface IProps {
 }
@@ -10,7 +10,7 @@ interface IState {
     showForm: boolean
 }
 
-class MainPageHeader extends React.Component<IProps, IState> {
+class MainPageHeaderComponent extends React.Component<IProps, IState> {
 
     constructor(props: IProps) {
         super(props);
@@ -45,4 +45,4 @@ class MainPageHeader extends React.Component<IProps, IState> {
     }
 }
 
-export default MainPageHeader;
+export const MainPageHeader = MainPageHeaderComponent;

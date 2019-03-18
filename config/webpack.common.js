@@ -51,7 +51,7 @@ module.exports = {
             root: ROOT_DIR,
         }),
         new HtmlWebpackPlugin({
-            title: 'COPT store',
+            title: 'Scheduler',
             template: './src/index.html',
         }),
         new webpack.ProvidePlugin({

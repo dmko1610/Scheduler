@@ -4,7 +4,7 @@ import {store} from '@store';
 import {Route, Router, Switch} from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
 import {CaptureRouteNotFound, RouteNotFound} from '@components/pages/NotFoundPage';
-import {MainPage} from '@components/MainPage';
+import {DefaultLayout} from '@components/DefaultLayout';
 
 export const history = createHistory();
 const locationListener = (location: any, action: any) => {
@@ -27,7 +27,7 @@ export const AppComponent: React.FunctionComponent<Props> = props => {
             <Router history={history}>
                 <CaptureRouteNotFound>
                     <Switch>
-                        <Route path="/" component={MainPage}/>
+                        <Route path="/" component={DefaultLayout}/>
                         <RouteNotFound/>
                     </Switch>
                 </CaptureRouteNotFound>

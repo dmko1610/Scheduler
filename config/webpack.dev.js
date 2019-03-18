@@ -7,7 +7,7 @@ module.exports = merge(common, {
     mode: 'development',
     devtool: 'inline-source-map',
     devServer: {
-        contentBase: './public',
+        contentBase: './src/assets',
         historyApiFallback: true,
         hot: true,
         inline: true,

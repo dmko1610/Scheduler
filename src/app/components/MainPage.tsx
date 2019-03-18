@@ -1,7 +1,7 @@
 import * as React from 'react';
-import MainPageBody from './MainPageBody';
-import MainPageFooter from './MainPageFooter';
-import MainPageHeader from './MainPageHeader';
+import MainPageBody from './content/MainPageBody';
+import {MainPageHeader} from '@components/headers/MainPageHeader';
+import {MainPageFooter} from '@components/footers/MainPageFooter';
 
 class MainPageComponent extends React.Component {
     public render() {

@@ -1,8 +1,8 @@
 import * as React from 'react';
-import listAdd from '../../assets/images/list_add.svg';
-import listEdit from '../../assets/images/list_edit.svg';
-import listRemove from '../../assets/images/list_remove.svg';
-import '../../assets/styles/MainPageBody.less';
+import listAdd from '../../../assets/images/list_add.svg';
+import listEdit from '../../../assets/images/list_edit.svg';
+import listRemove from '../../../assets/images/list_remove.svg';
+import '../../../assets/styles/MainPageBody.less';
 
 // import BodyCarousel from './Carousel'
 

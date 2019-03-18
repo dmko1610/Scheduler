@@ -1,7 +1,7 @@
 import * as React from 'react';
-import '../../assets/styles/MainPageFooter.less';
+import '../../../assets/styles/MainPageFooter.less';
 
-class MainPageFooter extends React.Component {
+class MainPageFooterComponent extends React.Component {
 
     public render() {
         return (
@@ -14,4 +14,4 @@ class MainPageFooter extends React.Component {
     }
 }
 
-export default MainPageFooter;
+export const MainPageFooter = MainPageFooterComponent;

@@ -13,9 +13,10 @@ export class SignUpForm extends React.Component<IProps> {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    //TODO: refactor to proper auth via actions
     public handleSubmit(event: any): void {
         event.preventDefault();
-        fetch('http://localhost:3000/register', {
+        const responsePromise = fetch('http://localhost:3000/register', {
             body: JSON.stringify({
                 'password': event.target.password.value,
                 'username': event.target.username.value
