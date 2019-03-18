@@ -1,57 +1,45 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "outDir": "build/dist",
-    "module": "es6",
-    "target": "es5",
-    "lib": ["es6", "dom"],
+    "baseUrl": "src",
+    "outDir": "./dist/",
     "sourceMap": true,
-    "allowJs": true,
-    "jsx": "react",
-    "moduleResolution": "node",
-    "rootDir": "src",
-    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": false,
     "noImplicitReturns": true,
     "noImplicitThis": true,
-    "noImplicitAny": true,
+    "noUnusedLocals": false,
+    "strict": true,
+    "strictFunctionTypes": false,
+    "module": "commonjs",
+    "target": "es5",
     "importHelpers": true,
-    "strictNullChecks": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "removeComments": true,
+    "lib": [
+      "es2015",
+      "dom"
+    ],
+    "jsx": "react",
     "paths": {
-      "@api": [
-        "app/api"
+      "@store/*": [
+        "app/store/*"
       ],
-      "@state/*": [
-        "app/state/*"
-      ],
-      "@state": [
-        "app/state/index"
+      "@store": [
+        "app/store/index"
       ],
       "@models": [
-        "app/api/models"
+        "app/models/index"
       ],
       "@components/*": [
         "app/components/*"
       ],
-      "@shared/*": [
-        "app/shared/*"
-      ],
-      "@helpers": [
-        "app/api/helpers"
+      "@containers/*": [
+        "app/containers/*"
       ]
     }
   },
   "include": [
     "./src/**/*",
     "./typings/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "build",
-    "scripts",
-    "acceptance-tests",    
-    "jest",
-    "src/setupTests.ts"
   ]
 }
