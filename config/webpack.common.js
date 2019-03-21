@@ -12,6 +12,7 @@ module.exports = {
     },
     resolve: {
         extensions: ['.css', '.ts', '.tsx', '.js', '.json'],
+        // @ts-ignore
         plugins: [new TsconfigPathsPlugin({configFile: appTsConfig})],
     },
     module: {

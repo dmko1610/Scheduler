@@ -115,8 +115,7 @@
       "check-format",
       "allow-pascal-case",
       "allow-leading-underscore"
-    ],
-    // tslint-react
+    ],    
     "jsx-no-multiline-js": false,
     "jsx-no-lambda": false
   }

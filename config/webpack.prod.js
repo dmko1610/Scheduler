@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const common = require('./webpack.common.js');
 const {resolvePath} = require('./utils');
 
+// @ts-ignore
 module.exports = merge(common, {
     mode: 'production',
     output: {

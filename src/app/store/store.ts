@@ -1,8 +1,8 @@
-import {applyMiddleware, createStore} from 'redux';
+import { applyMiddleware, createStore } from 'redux';
 import thunk from 'redux-thunk';
-import {reducer} from '@store/reducer';
+import { reducer } from '@store/reducer';
 
-let middleware = applyMiddleware(thunk);
+const middleware = applyMiddleware(thunk);
 
 // if (process.env.NODE_ENV !== 'production') {
 //     const devToolsExtension = window.__REDUX_DEVTOOLS_EXTENSION__;

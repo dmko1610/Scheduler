@@ -1,7 +1,7 @@
-import {ThunkDispatch} from 'redux-thunk';
+import { ThunkDispatch } from 'redux-thunk';
 
-import {Action} from 'redux';
-import {AppState} from '@store/app';
+import { Action } from 'redux';
+import { AppState } from '@store/app';
 
 export interface RootState {
     app: AppState;
