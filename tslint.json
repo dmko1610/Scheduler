@@ -117,6 +117,7 @@
       "allow-leading-underscore"
     ],    
     "jsx-no-multiline-js": false,
-    "jsx-no-lambda": false
+    "jsx-no-lambda": false,
+    "no-console": false
   }
 }

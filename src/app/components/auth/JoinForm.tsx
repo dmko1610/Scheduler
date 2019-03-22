@@ -13,7 +13,7 @@ interface IState {
     showForm: boolean,
 }
 
-export class JoinForm extends React.Component<IProps, IState> {
+class JoinFormComponent extends React.Component<IProps, IState> {
     constructor(props: IProps) {
         super(props);
     }
@@ -27,9 +27,9 @@ export class JoinForm extends React.Component<IProps, IState> {
                 <img src={git} alt="git" width="50px" height="50px"/>
                 <img src={linkedin} alt="linkedin" width="50px" height="50px"/>
                 <img src={google} alt="google" width="50px" height="50px"/>
-                {
-                    this.state.showForm ? <SignUpForm/> : null
-                }
+                {/*{*/}
+                    {/*this.state.showForm ? <SignUpForm/> : null*/}
+                {/*}*/}
                 {/* <button onClick={this.props.closePopup}>close me</button> */}
             </div>
         );
@@ -37,4 +37,4 @@ export class JoinForm extends React.Component<IProps, IState> {
 
 }
 
-export default JoinForm;
+export const JoinForm = JoinFormComponent;
