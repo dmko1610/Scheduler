@@ -1,11 +1,16 @@
 import * as appActions from '@store/app/app.actions';
+import {JOIN_FORM_VISIBILITY, SIGN_IN_FORM_VISIBILITY, SIGN_UP_FORM_VISIBILITY} from '@store/app/app.actions';
 
 export interface AppState {
-    visible: boolean;
+    joinFormVisible: boolean;
+    signUpFormVisible: boolean;
+    signInFormVisible: boolean;
 }
 
 const initialState: AppState = {
-    visible: false,
+    joinFormVisible: false,
+    signUpFormVisible: false,
+    signInFormVisible: false,
 };
 
 export const appReducer = (
@@ -13,10 +18,20 @@ export const appReducer = (
     action: appActions.Actions
 ): AppState => {
     switch (action.type) {
-        case '[app] TOGGLE_FORM':
+        case JOIN_FORM_VISIBILITY:
             return {
                 ...state,
-                visible: !state.visible,
+                joinFormVisible: !state.joinFormVisible,
+            };
+        case SIGN_IN_FORM_VISIBILITY:
+            return {
+                ...state,
+                signInFormVisible: !state.signInFormVisible,
+            };
+        case SIGN_UP_FORM_VISIBILITY:
+            return {
+                ...state,
+                signUpFormVisible: !state.signUpFormVisible,
             };
         default:
             return state;

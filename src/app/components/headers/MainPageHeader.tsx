@@ -2,9 +2,9 @@ import * as React from 'react';
 import logo from '../../../assets/images/organize.svg';
 import {connect} from 'react-redux';
 import {Thunks} from '@store/app';
-import {getVisibility} from '@store/app/app.selectors';
 import {DispatchThunk} from '@store';
 import {JoinForm} from '../auth/JoinForm';
+import {getJFVisibility} from '@store/app/app.selectors';
 
 interface IProps {
     toggleForm?: any;
@@ -42,14 +42,15 @@ class MainPageHeaderComponent extends React.Component<IProps, IState> {
 }
 
 const mapStateToProps = (state) => {
+    console.log('MAIN ' + getJFVisibility(state));
     return {
-        visible: getVisibility(state),
+        visible: getJFVisibility(state),
     };
 };
 
 const mapDispatchToProps = (dispatch: DispatchThunk) => ({
     toggleForm: () => {
-        dispatch(Thunks.toggleVisibility());
+        dispatch(Thunks.toggleJFVisibility());
     },
 });
 export const MainPageHeader = connect(mapStateToProps, mapDispatchToProps)(MainPageHeaderComponent);

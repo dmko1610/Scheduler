@@ -3,19 +3,32 @@ import {Dispatch} from 'redux';
 
 export const START_FETCHING = '[app] START_FETCHING';
 export const FINISH_FETCHING = '[app] FINISH_FETCHING';
-export const SET_PROFILE = '[app] SET_PROFILE';
-export const TOGGLE_FORM = '[app] TOGGLE_FORM';
+export const SIGN_UP_FORM_VISIBILITY = '[app] SIGN_UP_FORM_VISIBILITY';
+export const SIGN_IN_FORM_VISIBILITY = '[app] SIGN_IN_FORM_VISIBILITY';
+export const JOIN_FORM_VISIBILITY = '[app] JOIN_FORM_VISIBILITY';
 
 export const Actions = {
     startFetching: () => createAction(START_FETCHING),
     finishFetching: () => createAction(FINISH_FETCHING),
-    toggleForm: () => createAction(TOGGLE_FORM),
+    toggleJFVisibility: () => createAction(JOIN_FORM_VISIBILITY),
+    toggleSUFVisibility: () => createAction(SIGN_UP_FORM_VISIBILITY),
+    toggleSIFVisibility: () => createAction(SIGN_IN_FORM_VISIBILITY),
 };
 
 export const Thunks = {
-    toggleVisibility: () => {
+    toggleJFVisibility: () => {
         return (dispatch: Dispatch) => {
-            dispatch(Actions.toggleForm());
+            dispatch(Actions.toggleJFVisibility());
+        };
+    },
+    toggleSUFVisibility: () => {
+        return (dispatch: Dispatch) => {
+            dispatch(Actions.toggleSUFVisibility());
+        };
+    },
+    toggleSIFVisibility: () => {
+        return (dispatch: Dispatch) => {
+            dispatch(Actions.toggleSIFVisibility());
         };
     },
 };

@@ -3,11 +3,20 @@ import {RootState} from '@store/store.types';
 
 export const getApp = (state: RootState) => state.app;
 
-export const getVisibility = createSelector(
+export const getJFVisibility = createSelector(
     getApp,
-    appState => appState.visible,
+    appState => appState.joinFormVisible,
 );
 
+export const getSUFVisibility = createSelector(
+    getApp,
+    appState => appState.signUpFormVisible,
+);
+
+export const getSIFVisibility = createSelector(
+    getApp,
+    appState => appState.signInFormVisible,
+);
 // export const getItems = createSelector(
 //     getApp,
 //     appState => appState.items,
