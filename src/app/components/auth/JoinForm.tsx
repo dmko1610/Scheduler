@@ -41,7 +41,6 @@ class JoinFormComponent extends React.Component<IProps, IState> {
     };
 
     add = (event) => {
-        event.preventDefault();
         if (event.keyCode === 27) {
             this.props.visibleSignUpForm && this.toggleSignUpVisibility();
             this.props.visibleSignInForm && this.toggleSignInVisibility();

@@ -8,14 +8,28 @@ export class SignUpForm extends React.Component<IProps> {
         super(props);
     }
 
+    handleSubmit = (event) => {
+        event.preventDefault();
+        fetch('http://localhost:3000/register', {
+            body: JSON.stringify({
+                password: event.target.password.value,
+                username: event.target.username.value,
+            }),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            method: 'POST',
+        });
+    };
+
     public render() {
         return (
-            <form className="sign-up-form">
-                <label htmlFor="sign-up-username">Enter username</label>
-                <input id="sign-up-username" name="sign-up-username" type="text" placeholder="Username"/>
+            <form className="sign-up-form" onSubmit={this.handleSubmit}>
+                <label htmlFor="username">Enter username</label>
+                <input id="username" name="username" type="text" placeholder="Username"/>
 
-                <label htmlFor="sign-up-password">Enter your password</label>
-                <input id="sign-up-password" name="sign-up-password" type="password" placeholder="Password"/>
+                <label htmlFor="password">Enter your password</label>
+                <input id="password" name="password" type="password" placeholder="Password"/>
 
                 <button>Send data!</button>
             </form>
