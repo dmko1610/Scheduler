@@ -41,20 +41,16 @@ class JoinFormComponent extends React.Component<IProps, IState> {
     };
 
     add = (event) => {
+        event.preventDefault();
         if (event.keyCode === 27) {
-            if (this.props.visibleSignUpForm) {
-                // this.toggleSignInVisibility();
-                console.log('SIGNUP CLOSED');
-            } else if (this.props.visibleSignInForm) {
-                console.log('SIGNIN CLOSED');
-                // this.toggleSignUpVisibility();
-            }
+            this.props.visibleSignUpForm && this.toggleSignUpVisibility();
+            this.props.visibleSignInForm && this.toggleSignInVisibility();
         }
     };
 
     public render() {
         return (
-            <div className="register-form" onKeyPress={this.add}>
+            <div className="register-form" onKeyDown={this.add}>
                 <button className="sign-up" onClick={this.toggleSignUpVisibility}>SIGN UP</button>
                 <button className="sign-in" onClick={this.toggleSignInVisibility}>SIGN IN</button>
                 <img src={vk} alt="vk" width="50px" height="50px"/>
