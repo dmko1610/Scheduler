@@ -8,14 +8,28 @@ class SignInFormComponent extends React.Component<IProps> {
         super(props);
     }
 
+    handleLogin = (event) => {
+        event.preventDefault();
+        fetch('http://localhost:3000/login', {
+            body: JSON.stringify({
+                password: event.target.password.value,
+                username: event.target.username.value,
+            }),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            method: 'POST',
+        }).then(response => response.json());
+    };
+
     public render() {
         return (
-            <form className="sign-in-form">
-                <label htmlFor="sign-in-username">Enter username</label>
-                <input id="sign-in-username" name="sign-in-username" type="text" placeholder="Username"/>
+            <form className="sign-in-form" onSubmit={this.handleLogin}>
+                <label htmlFor="username">Enter username</label>
+                <input id="username" name="username" type="text" placeholder="Username"/>
 
-                <label htmlFor="sign-in-password">Enter your password</label>
-                <input id="sign-in-password" name="sign-in-password" type="password" placeholder="Password"/>
+                <label htmlFor="password">Enter your password</label>
+                <input id="password" name="password" type="password" placeholder="Password"/>
 
                 <button>Login</button>
             </form>

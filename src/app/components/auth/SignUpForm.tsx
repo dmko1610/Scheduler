@@ -19,7 +19,7 @@ export class SignUpForm extends React.Component<IProps> {
                 'Content-Type': 'application/json',
             },
             method: 'POST',
-        });
+        }).then(response => response.json());
     };
 
     public render() {
@@ -31,7 +31,7 @@ export class SignUpForm extends React.Component<IProps> {
                 <label htmlFor="password">Enter your password</label>
                 <input id="password" name="password" type="password" placeholder="Password"/>
 
-                <button>Send data!</button>
+                <button>Register</button>
             </form>
         );
     }

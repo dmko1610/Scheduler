@@ -31,6 +31,16 @@ export const Thunks = {
             dispatch(Actions.toggleSIFVisibility());
         };
     },
+    startFetching: () => {
+      return (dispatch: Dispatch) => {
+          dispatch(Actions.startFetching());
+      };
+    },
+    finishFetching: () => {
+        return (dispatch: Dispatch) => {
+            dispatch(Actions.finishFetching());
+        };
+    },
 };
 export type Actions = ActionsUnion<typeof Actions>;
 export type Thunks = ActionsUnion<typeof Thunks>;

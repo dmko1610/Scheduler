@@ -1,5 +1,9 @@
 import * as appActions from '@store/app/app.actions';
-import {JOIN_FORM_VISIBILITY, SIGN_IN_FORM_VISIBILITY, SIGN_UP_FORM_VISIBILITY} from '@store/app/app.actions';
+import {
+    JOIN_FORM_VISIBILITY,
+    SIGN_IN_FORM_VISIBILITY,
+    SIGN_UP_FORM_VISIBILITY,
+} from '@store/app/app.actions';
 
 export interface AppState {
     joinFormVisible: boolean;

@@ -5,6 +5,7 @@ import {Thunks} from '@store/app';
 import {DispatchThunk} from '@store';
 import {JoinForm} from '../auth/JoinForm';
 import {getJFVisibility} from '@store/app/app.selectors';
+import '../../../assets/styles/MainPageHeader.less';
 
 interface IProps {
     toggleForm?: any;

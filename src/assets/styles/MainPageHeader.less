@@ -1,0 +1,36 @@
+.main-page__header {
+  display: grid;
+  justify-content: space-between;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 330px auto auto;
+
+  .main-page__logo {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  h1 {
+    grid-column: 2;
+    grid-row: 2;
+    padding-bottom: 40px;
+  }
+
+  h3 {
+    padding-top: 40px;
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .main-page__title {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: flex-end;
+  }
+
+  .main-page__button {
+    margin: 20px;
+    padding: 20px 0;
+    grid-column: 2;
+    grid-row: 3;
+  }
+}
