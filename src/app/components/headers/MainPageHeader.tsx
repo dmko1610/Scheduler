@@ -27,8 +27,8 @@ class MainPageHeaderComponent extends React.Component<IProps, IState> {
 
     public render() {
         return (
-            <header className="main-page__header">
-                <div className="horizontal-line">
+            <header className={this.props.visible ? 'main-page__header blur-filter' : 'main-page__header'}>
+                <div className="horizontal-line" >
                     <img src={logo} className="main-page__logo" height="50px" alt="logo"/>
                     <h2 className="main-page__title">Scheduler v.0.2</h2>
                 </div>
