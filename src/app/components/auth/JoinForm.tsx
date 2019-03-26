@@ -1,14 +1,15 @@
 import * as React from 'react';
-import git from '../../../assets/images/github-logo.svg';
-import google from '../../../assets/images/google-plus.svg';
-import linkedin from '../../../assets/images/linkedin.svg';
-import vk from '../../../assets/images/vk-social-logotype.svg';
+// import git from '../../../assets/images/github-logo.svg';
+// import google from '../../../assets/images/google-plus.svg';
+// import linkedin from '../../../assets/images/linkedin.svg';
+// import vk from '../../../assets/images/vk-social-logotype.svg';
 import {SignUpForm} from './SignUpForm';
 import {DispatchThunk} from '@store';
 import {connect} from 'react-redux';
 import {Thunks} from '@store/app';
 import {getSIFVisibility, getSUFVisibility} from '@store/app/app.selectors';
 import {SignInForm} from '@components/auth/SignInForm';
+import '../../../assets/styles/JoinForm.less';
 
 interface IProps {
     toggleSignUpForm?: any;
@@ -52,10 +53,10 @@ class JoinFormComponent extends React.Component<IProps, IState> {
             <div className="register-form" onKeyDown={this.add}>
                 <button className="sign-up" onClick={this.toggleSignUpVisibility}>SIGN UP</button>
                 <button className="sign-in" onClick={this.toggleSignInVisibility}>SIGN IN</button>
-                <img src={vk} alt="vk" width="50px" height="50px"/>
-                <img src={git} alt="git" width="50px" height="50px"/>
-                <img src={linkedin} alt="linkedin" width="50px" height="50px"/>
-                <img src={google} alt="google" width="50px" height="50px"/>
+                {/*<img src={vk} alt="vk" width="50px" height="50px"/>*/}
+                {/*<img src={git} alt="git" width="50px" height="50px"/>*/}
+                {/*<img src={linkedin} alt="linkedin" width="50px" height="50px"/>*/}
+                {/*<img src={google} alt="google" width="50px" height="50px"/>*/}
                 {
                     this.props.visibleSignUpForm && <SignUpForm/>
                 }

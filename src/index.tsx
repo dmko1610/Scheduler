@@ -1,5 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import './assets/styles/index.less';
 
 const rootElement = document.getElementById('root');
 

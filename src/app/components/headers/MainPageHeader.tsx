@@ -28,15 +28,24 @@ class MainPageHeaderComponent extends React.Component<IProps, IState> {
     public render() {
         return (
             <header className="main-page__header">
-                <img src={logo} className="main-page__logo" height="50px" alt="logo"/>
-                <h2 className="main-page__title">Scheduler v.0.2</h2>
-                <h1>PLAN.EXECUTE.DIVIDE</h1>
-                <h3>we've developed it. and have made our best. <br/>
-                    cuz' we are professionals</h3>
-                <button className="main-page__button" onClick={this.toggleVisibility}>JOIN</button>
-                {
-                    this.props.visible ? <JoinForm/> : null
-                }
+                <div className="horizontal-line">
+                    <img src={logo} className="main-page__logo" height="50px" alt="logo"/>
+                    <h2 className="main-page__title">Scheduler v.0.2</h2>
+                </div>
+                <div className="vertical-line">
+                    <h1>PLAN.EXECUTE.DIVIDE</h1>
+                    <h3>we've developed it. and have made our best. <br/>
+                        cuz' we are professionals. <br/>
+                        Make your dreams come true. <br/>
+                        JUST DO IT!
+                    </h3>
+                    <button className="main-page__button" onClick={this.toggleVisibility}>JOIN</button>
+                </div>
+                <div className="join-form">
+                    {
+                        this.props.visible ? <JoinForm/> : null
+                    }
+                </div>
             </header>
         );
     }
